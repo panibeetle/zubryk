@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graf"
+    app:startDestination="@id/zubr">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.zubrania.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/newword"
+        android:name="com.example.zubrania.newword"
+        android:label="fragment_newword"
+        tools:layout="@layout/fragment_newword" >
+        <action
+            android:id="@+id/action_newword_to_bank3"
+            app:destination="@id/bank3" />
+    </fragment>
+    <fragment
+        android:id="@+id/game"
+        android:name="com.example.zubrania.game"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_game_to_bank3"
+            app:destination="@id/bank3" />
+    </fragment>
+    <fragment
+        android:id="@+id/zubr"
+        android:name="com.example.zubrania.zubr"
+        android:label="fragment_zubr"
+        tools:layout="@layout/fragment_zubr" >
+        <action
+            android:id="@+id/action_zubr_to_bank3"
+            app:destination="@id/bank3" />
+    </fragment>
+    <fragment
+        android:id="@+id/bank3"
+        android:name="com.example.zubrania.bank"
+        android:label="fragment_bank"
+        tools:layout="@layout/fragment_bank" >
+        <action
+            android:id="@+id/action_bank3_to_game"
+            app:destination="@id/game" />
+        <action
+            android:id="@+id/action_bank3_to_zubr"
+            app:destination="@id/zubr" />
+        <action
+            android:id="@+id/action_bank3_to_newword"
+            app:destination="@id/newword" />
+    </fragment>
+</navigation>
