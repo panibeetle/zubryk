@@ -28,6 +28,4 @@ class zubr : Fragment() {
         return inflater.inflate(R.layout.fragment_zubr, container, false)
 
     }
-
-
 }
